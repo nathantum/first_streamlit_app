@@ -22,7 +22,7 @@ streamlit.header('🍌🥭 ---------Build your own Smoothie---------- 🥝🍇')
 # Let's put a pick list here so they can pick the fruit they want to include
 fruits_selected = streamlit.multiselect("Pick some fruits:", list (my_fruit_list.index), ['Avocado', 'Strawberries']) #display the table on the page
 
-def get_fruit_load():
+def get_fruit_load_list():
   with my_cnx.curson() as my_cur:
     my_cur.execute("select * from fruit_load_list")
     return my_cur.fetchall()
